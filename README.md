@@ -19,17 +19,16 @@ dataSwiffer.py -path to csv files -path to output directory/folder
 
 Eg. python dataSwiffer.py "C:\Users\rgayle3\Downloads\DropletCsvs" "C:\Users\rgayle3\Downloads\DropletCsvs\output"
 
-
-## Data Analyzer
-
-data_analyzer.py -path to csvFiles -path to output directory/Folder
--Goes through a directory of files and will take the Permeability of the files and will put it into a summarized csv with the mean Permeability of grouped csvs by name and the standard deviation of the files as well 
-Eg. python data_analyzer.py "D:\Training Data\Droplet Videos\1-5-26\output" "D:\Training Data\Droplet Videos\1-5-26\output"
-
-
  
 ## Auto Analyze
 python autoAnalyze.py "path to csvFiles" "path to output directory/folder"
 -will automatically perform the permeability calcs and and other statistics of the given csv about the water droplets 
 
 Eg. python autoAnalyze.py "C:\Users\rgayle3\Downloads\DropletCsvs" "C:\Users\rgayle3\Downloads\DropletCsvs\output"
+
+
+## Data Analyzer
+
+data_analyzer.py -path to csvFiles -path to output directory/Folder
+-Goes through a directory of files and will take the Permeability of the files and will put it into a summarized csv with the mean Permeability of grouped csvs by name and the standard deviation of the files as well 
+Eg. python data_analyzer.py "D:\Training Data\Droplet Videos\1-5-26\output" "D:\Training Data\Droplet Videos\1-5-26\output"
