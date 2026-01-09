@@ -23,8 +23,8 @@ def analyze(csv_path, output_path):
         mean = df['DIB Radius'].mean()
         print('DIB Rad Mean:', mean)
 
-        uL = mean + (std*3) 
-        lL = mean - (std*3)
+        uL = mean + (std*2) 
+        lL = mean - (std*2)
 
         #outliers = np.where((df['DIB Radius']> uL) | (df['DIB Radius'] < lL))
 
@@ -139,5 +139,6 @@ if __name__ == "__main__":
     csv_path = sys.argv[1]
 
     output_path = sys.argv[2]
+
 
     main(csv_path, output_path)
