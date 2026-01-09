@@ -26,9 +26,9 @@ def analyze(csv_path, output_path):
         uL = mean + (std*2) 
         lL = mean - (std*2)
 
-        #outliers = np.where((df['DIB Radius']> uL) | (df['DIB Radius'] < lL))
+        outliers = np.where((df['DIB Radius']> uL) | (df['DIB Radius'] < lL))
 
-        outliers = np.where((df['DIB Radius']> uL) & (df['DIB Radius'] < lL))
+        #outliers = np.where((df['DIB Radius']> uL) & (df['DIB Radius'] < lL))
         
         df.drop(outliers[0], axis=0, inplace=True)
 
@@ -142,3 +142,4 @@ if __name__ == "__main__":
 
 
     main(csv_path, output_path)
+
