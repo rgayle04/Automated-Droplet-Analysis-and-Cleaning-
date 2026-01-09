@@ -9,7 +9,9 @@ This acts as a sort of mini version of the Detectron Droplet Detector to be used
 
 These should be used in the following order: 1) dataSwiffer.py 2) autoAnalyze.py 3) data_analyzer.py
 
-#
+No prior environment setup should be required
+
+
 ## Data Cleaning
 
 dataSwiffer.py -path to csv files -path to output directory/folder
@@ -17,7 +19,7 @@ dataSwiffer.py -path to csv files -path to output directory/folder
 
 Eg. python dataSwiffer.py "C:\Users\rgayle3\Downloads\DropletCsvs" "C:\Users\rgayle3\Downloads\DropletCsvs\output"
 
-#
+
 ## Data Analyzer
 
 data_analyzer.py -path to csvFiles -path to output directory/Folder
@@ -25,7 +27,7 @@ data_analyzer.py -path to csvFiles -path to output directory/Folder
 Eg. python data_analyzer.py "D:\Training Data\Droplet Videos\1-5-26\output" "D:\Training Data\Droplet Videos\1-5-26\output"
 
 
-# 
+ 
 ## Auto Analyze
 python autoAnalyze.py "path to csvFiles" "path to output directory/folder"
 -will automatically perform the permeability calcs and and other statistics of the given csv about the water droplets 
