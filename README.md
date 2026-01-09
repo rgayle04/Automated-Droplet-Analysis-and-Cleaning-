@@ -9,7 +9,7 @@ This acts as a sort of mini version of the Detectron Droplet Detector to be used
 
 These should be used in the following order: 1) dataSwiffer.py 2) autoAnalyze.py 3) data_analyzer.py
 
-No prior environment setup should be required simple downloading of these files should suffice. 
+No prior environment setup should be required simple downloading of these files should suffice and running these programs on Anaconda Promp. 
 
 
 ## Data Cleaning
