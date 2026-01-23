@@ -56,12 +56,10 @@ def analyze(csv_path):
 
         outliers = np.where((df['DIB Radius']> uL) | (df['DIB Radius'] < lL))
 
-        #outliers = np.where((df['DIB Radius']> uL) & (df['DIB Radius'] < lL))
         print(f'Number of Outliers: {len(outliers[0])}')
-        df.drop(outliers[0], axis=0, inplace=True)
-
+        df = df[(df['DIB Radius'] >= lL) & (df['DIB Radius'] <= uL)]
+        print(f'Rows remaining after cleaning: {len(df)}')
         split_name = name.split(" ")
-        
         sp_name = split_name[-1]
 
         osmP = ""
@@ -239,3 +237,4 @@ if __name__=="__main__":
 
     main(csv_path)
     
+
