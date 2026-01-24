@@ -160,7 +160,7 @@ def analyze(csv_path):
         df.to_excel(csv_path, index=False)
 
         print(f'[DONE] {name} processed. \n')
-
+'''
 def analyzeFiles(path):
     print(f'{path}')
     os.makedirs(path, exist_ok=True)
@@ -225,7 +225,7 @@ def analyzeFiles(path):
                     outfile.write(f'\n')
             else:
                 outfile.write(f'\n')
-        
+'''        
 
 def main(csv_path):
     if os.path.isdir(csv_path):
@@ -235,15 +235,15 @@ def main(csv_path):
         for file in csvFiles:
             swiffer(file)
             newX = swapFileExt(file)
-            #print(newX)
+            print(newX)
             analyze(newX)
             
-        analyzeFiles(csv_path)
+        #analyzeFiles(csv_path)
 
     else:
         swiffer(csv_path)
         newX = swapFileExt(csv_path)
-        #print(newX)
+        print(newX)
         analyze(newX)
 
 if __name__=="__main__":
