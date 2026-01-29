@@ -17,20 +17,23 @@ def analyze(csv_path, output_path):
     if df.empty:
         return
     else:
-
         std = np.std(df['DIB Radius'], ddof= 1)
         print('DIB Rad Standard Deviation:', std)
         mean = df['DIB Radius'].mean()
         print('DIB Rad Mean:', mean)
 
         uL = mean + (std*2) 
+        print(f'Upper Limit: {uL}') 
         lL = mean - (std*2)
+        print(f'Lower Limit: {lL}')
+        df = df[df['DIB Radius'].notna()]
 
         outliers = np.where((df['DIB Radius']> uL) | (df['DIB Radius'] < lL))
 
-        #outliers = np.where((df['DIB Radius']> uL) & (df['DIB Radius'] < lL))
-        
-        df.drop(outliers[0], axis=0, inplace=True)
+        print(f'Number of Outliers: {len(outliers[0])}')
+        df = df[(df['DIB Radius'] >= lL) & (df['DIB Radius'] <= uL)]
+        print(f'Rows remaining after cleaning: {len(df)}')
+
 
         split_name = name.split(" ")
         
@@ -142,4 +145,5 @@ if __name__ == "__main__":
 
 
     main(csv_path, output_path)
+
 
