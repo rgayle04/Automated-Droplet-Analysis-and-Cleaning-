@@ -63,6 +63,7 @@ def analyze(csv_path):
         print(f'Upper Limit: {uL}') 
         lL = mean - (std*2)
         print(f'Lower Limit: {lL}')
+        df = df[df['DIB Radius'].notna()]
 
         outliers = np.where((df['DIB Radius']> uL) | (df['DIB Radius'] < lL))
 
@@ -252,3 +253,4 @@ if __name__=="__main__":
 
     main(csv_path)
     
+
