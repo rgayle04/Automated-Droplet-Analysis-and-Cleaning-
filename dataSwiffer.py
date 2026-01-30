@@ -237,7 +237,7 @@ def main(csv_path):
             swiffer(file)
             newX = swapFileExt(file)
             print(newX)
-            analyze(newX)
+            #analyze(newX)
             
         #analyzeFiles(csv_path)
 
@@ -245,7 +245,7 @@ def main(csv_path):
         swiffer(csv_path)
         newX = swapFileExt(csv_path)
         print(newX)
-        analyze(newX)
+        #analyze(newX)
 
 if __name__=="__main__":
     csv_path = sys.argv[1]
@@ -253,4 +253,5 @@ if __name__=="__main__":
 
     main(csv_path)
     
+
 
